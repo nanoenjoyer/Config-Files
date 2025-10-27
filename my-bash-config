@@ -9,7 +9,6 @@ case $- in
 esac
 
 
-alias st='git status'
 alias tarc='tar -cf'
 alias tarv='tar -tvf'
 alias tarx='tar -xvf'
@@ -40,6 +39,9 @@ alias ....='cd ../../../../'
 alias .='cd ../'
 alias ..='cd ../../'
 
+alias gitc='git commit -m'
+alias st='git status'
+alias log='git log --oneline'
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

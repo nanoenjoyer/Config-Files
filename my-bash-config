@@ -8,7 +8,7 @@ case $- in
       *) return;;
 esac
 
-
+#bash commands aliases
 alias tarc='tar -cf'
 alias tarv='tar -tvf'
 alias tarx='tar -xvf'
@@ -39,9 +39,20 @@ alias ....='cd ../../../../'
 alias .='cd ../'
 alias ..='cd ../../'
 
+#git aliases
 alias gitc='git commit -m'
 alias st='git status'
 alias log='git log --oneline'
+alias all='git add . && gitc'
+
+
+#firefox aliases
+alias calc='firefox file:///home/ibrahim/javascript/basic-projects/basic_calculator/calculator.html'
+alias youtube='firefox youtube.com'
+alias rps='firefox file:///home/ibrahim/javascript/basic-projects/Rock-Paper-Scissors/Rock-Paper-Scissors.html'
+alias coinflip='firefox file:///home/ibrahim/javascript/basic-projects/coin-flip/coin-flip.html'
+
+
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -149,3 +160,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export GTK_MODULES=""
+

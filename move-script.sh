@@ -36,11 +36,11 @@ else
 fi
 
 
-svg=(~/downloads/*.svg)
+svg=(~/downloads/*.{svg,ico})
 
 if [ ${#svg[@]} -eq 0 ]
 then
-    echo "no svg files in downloads"
+    echo "no svg/ico files in downloads"
 else
     # Loop over the contents of the array, using quotes for safety
     for file in ${svg[@]}

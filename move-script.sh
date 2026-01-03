@@ -40,12 +40,25 @@ svg=(~/downloads/*.{svg,ico})
 
 if [ ${#svg[@]} -eq 0 ]
 then
-    echo "no svg/ico files in downloads"
+    echo "no svg/ico files in downloads/"
 else
-    # Loop over the contents of the array, using quotes for safety
-    for file in ${svg[@]}
+    for file in "${svg[@]}"
     do
       mv "$file" ~/pictures/icons/
       echo $(basename "$file") has been moved to pictures/icons/
+    done
+fi
+
+
+audio=(~/downloads/*.mp3)
+
+if [ ${#audio[@]} -eq 0 ]
+then
+    echo "no audio files in downloads/"
+else
+    for file in "${audio[@]}"
+    do
+      mv "$file" ~/audio
+      echo $(basename "$file") has been moved to audio/
     done
 fi

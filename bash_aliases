@@ -1,0 +1,88 @@
+    #bash commands aliases
+alias os='cat /etc/os-release'
+alias gpu='glxinfo | grep "OpenGL renderer"'
+alias df='df -h --exclude=squashfs'
+alias free='free -g'
+alias speed='speedtest-cli'
+alias chess='telnet freechess.org'
+
+alias tarc='tar -cf'
+alias tarv='tar -tvf'
+alias tarx='tar -xvf'
+alias tarz='tar -czvf'
+alias zip='gzip'
+alias unzip='gunzip'
+alias update1='sudo apt update && sudo apt dist-upgrade'
+alias f='fg'
+alias fd='fdfind'
+alias purge='sudo apt purge && sudo apt autoremove'
+alias remove='sudo apt remove'
+alias kill='pkill -f'
+alias dpkg='sudo dpkg -i'
+alias ls='ls -lh --color=auto'
+alias e=exit
+alias c=clear
+alias s=PS1='$'
+alias mk=mkdir
+alias update='sudo apt update && sudo apt upgrade'
+alias install='sudo apt install'
+alias h=history
+alias up='cd ..'
+alias up2='cd ../../'
+alias up3='cd ../../../'
+alias up4='cd ../../../../'
+
+
+  # Programs
+alias steam='steam >/dev/null 2>&1 &'
+alias discord='discord >/dev/null 2>&1 &'
+alias wireshark='wireshark >/dev/null 2>&1 &'
+# capture packets in the terminal and write to that file, max 10files each being 500MB
+# when the 10files become full it'll overwrite the first and then 2nd and so on
+# i (means interface 1 which is wifi(wlo))
+alias capture='dumpcap -i 1 -w ~/Documents/sample.pcapng -b filesize:500000 -b files:10'
+
+
+    # git aliases
+alias gitc='git commit -m'
+alias st='git status'
+alias log='git log --oneline'
+alias all='git add . && gitc'
+  #config name and mail globally
+# add space and enter email in quotes
+# example: gmail "example@gmail.com"
+alias gmail='git config --global user.email'
+# add space and enter username in quotes
+# example: gname "username"
+alias gname='git config --global user.name'
+  # config name and mail per repo
+alias mail='git config user.email'
+alias name='git config user.name'
+
+
+    # GitHub key-gen aliases
+# generate a new key for github acc (add space and enter account email in quotes)
+# example: keygen "example@gmail.com"
+alias genkey='ssh-keygen -t ed25519 -C'
+# add key
+alias addkey='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519'
+# copy key (copy the output, then create new key on github and paste it there)
+alias cpkey='cat ~/.ssh/id_ed25519.pub'
+# test ssh connection to github
+# expected output: Hi (username!) You've successfully authenticated...
+alias testkey='ssh -T git@github.com'
+
+
+    # firefox aliases
+#"&" - makes process run in the background, this allows us to use other commands in the terminal and the process will still run if we terminate the terminal session
+#"/dev/null 2>&1" - sends stderr(standard error) and stdout(standar output) to /dev/null
+alias youtube='firefox youtube.com/feed/playlists >/dev/null 2>&1 &'
+alias calc='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/basic_calculator/ >/dev/null 2>&1 &'
+alias rps='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/rps-with-bot-battles/ >/dev/null 2>&1 &'
+alias coinflip='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/coin-flip/ >/dev/null 2>&1 &'
+alias convert='firefox https://ibrahimmoalim.github.io/JavaScript/problemSolvingPractices/problems/p3-ConversionTool/ >/dev/null 2>&1 &'
+
+
+  # My Python programs
+alias quiz='python3 python/basic-programs/quiz_game.py'
+alias weight='python3 python/basic-programs/weight_converter.py'

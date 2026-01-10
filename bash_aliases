@@ -62,16 +62,24 @@ alias name='git config user.name'
 
 
     # GitHub key-gen aliases
-# generate a new key for github acc (add space and enter account email in quotes)
-# example: genkey "example@gmail.com"
+# generate a new key for github acc (add space and enter account email or username in quotes)
+# example: genkey "example@gmail.com" or genkey "username"
+# if you're adding a key for alt acc, after you're asked where to save the key
+# type ~/.ssh/id_ed25519_alt
 alias genkey='ssh-keygen -t ed25519 -C'
 # add key
+# for alt do the second
 alias addkey='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519'
+alias addkey_alt='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519_alt'
 # copy key (copy the output, then create new key on github and paste it there)
+# for alt do the second
 alias cpkey='cat ~/.ssh/id_ed25519.pub'
+alias cpkey_alt='cat ~/.ssh/id_ed25519_alt.pub'
 # test ssh connection to github
+# for alt do the second, this requires a .ssh/config file
 # expected output: Hi (username!) You've successfully authenticated...
 alias testkey='ssh -T git@github.com'
+alias testkey_alt='ssh -T git@github.com-alt'
 
 
     # firefox aliases

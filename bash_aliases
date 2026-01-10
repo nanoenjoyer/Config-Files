@@ -63,7 +63,7 @@ alias name='git config user.name'
 
     # GitHub key-gen aliases
 # generate a new key for github acc (add space and enter account email in quotes)
-# example: keygen "example@gmail.com"
+# example: genkey "example@gmail.com"
 alias genkey='ssh-keygen -t ed25519 -C'
 # add key
 alias addkey='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519'
@@ -81,9 +81,10 @@ alias youtube='firefox youtube.com/feed/playlists >/dev/null 2>&1 &'
 alias calc='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/basic_calculator/ >/dev/null 2>&1 &'
 alias rps='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/rps-with-bot-battles/ >/dev/null 2>&1 &'
 alias coinflip='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/coin-flip/ >/dev/null 2>&1 &'
-alias convert='firefox https://ibrahimmoalim.github.io/JavaScript/problemSolvingPractices/problems/p3-ConversionTool/ >/dev/null 2>&1 &'
 
 
   # My Python programs
 alias quiz='python3 python/basic-programs/quiz_game.py'
 alias weight='python3 python/basic-programs/weight_converter.py'
+alias hangman='python3 python/basic-programs/hangman.py'
+alias convert='python3 python/basic-programs/ipv4_decimal_binary.py'

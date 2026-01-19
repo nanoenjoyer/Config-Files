@@ -92,7 +92,11 @@ alias coinflip='firefox https://ibrahimmoalim.github.io/JavaScript/basic-project
 
 
   # My Python programs
-alias quiz='python3 python/basic-programs/quiz_game.py'
-alias weight='python3 python/basic-programs/weight_converter.py'
-alias hangman='python3 python/basic-programs/hangman.py'
-alias convert='python3 python/basic-programs/ipv4_decimal_binary.py'
+# Terminal programs
+alias quiz='python3 python/basic-programs/terminal-programs/quiz_game.py'
+alias weight='python3 python/basic-programs/terminal-programs/weight_converter.py'
+alias hangman='python3 python/basic-programs/terminal-programs/hangman.py'
+alias convert='python3 python/basic-programs/terminal-programs/ipv4_decimal_binary.py'
+alias play='python3 python/basic-programs/terminal-programs/play_audio_files.py'
+# Apps
+alias weather='python3 python/basic-programs/programs/weather-app/weather_app.py'

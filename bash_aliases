@@ -31,7 +31,7 @@ alias up='cd ..'
 alias up2='cd ../../'
 alias up3='cd ../../../'
 alias up4='cd ../../../../'
-alias move='./bash/move-script.sh'
+alias move_sh='./bash/move-script.sh'
 
 
   # Programs
@@ -98,5 +98,8 @@ alias weight='python3 python/basic-programs/terminal-programs/weight_converter.p
 alias hangman='python3 python/basic-programs/terminal-programs/hangman.py'
 alias convert='python3 python/basic-programs/terminal-programs/ipv4_decimal_binary.py'
 alias play='python3 python/basic-programs/terminal-programs/play_audio_files.py'
+alias move_py='python3 python/basic-programs/terminal-programs/move_script.py'
+alias alarm='python3 python/basic-programs/terminal-programs/alarm_clock.py'
+
 # Apps
 alias weather='python3 python/basic-programs/programs/weather-app/weather_app.py'

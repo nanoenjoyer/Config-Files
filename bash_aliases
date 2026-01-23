@@ -36,6 +36,7 @@ alias move_sh='./bash/move-script.sh'
 
   # Programs
 alias steam='steam >/dev/null 2>&1 &'
+alias audacity='audacity >/dev/null 2>&1 &'
 alias discord='discord >/dev/null 2>&1 &'
 alias wireshark='wireshark >/dev/null 2>&1 &'
 # capture packets in the terminal and write to that file, max 10files each being 500MB

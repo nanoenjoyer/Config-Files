@@ -74,7 +74,7 @@
 		"body": [
 			"import sys",
 			"from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QLabel,",
-			"                             QVBoxLayout, QHBoxLayout)",
+			"                             QVBoxLayout, QHBoxLayout, QPushButton, QLineEdit)",
 			"from PyQt5.QtGui import QIcon, QFont, QPixmap",
 			"from PyQt5.QtCore import Qt",
 			"",
@@ -88,6 +88,9 @@
 			"\t\tself.initUI()",
 			"",
 			"\tdef initUI(self):",
+			"\t\tcentral_widget = QWidget(self)",
+			"\t\tself.setCentralWidget(central_widget)",
+			"",
 			"\t\tself.setStyleSheet('''",
 			"\t\t\t$3",
 			"\t\t''')",

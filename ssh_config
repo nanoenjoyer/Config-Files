@@ -1,8 +1,6 @@
-<!-- 
- Put this in .ssh/config
- if no config file in .ssh then make it.
- the "IdentityFile" for both accounts have to exist.
-  -->
+# Put this in .ssh/config
+# if no config file in .ssh then make it.
+# the "IdentityFile" for both accounts have to exist.
 
 # Main GitHub account (default)
 Host github.com

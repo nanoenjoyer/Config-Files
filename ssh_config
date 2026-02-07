@@ -1,0 +1,20 @@
+<!-- 
+ Put this in .ssh/config
+ if no config file in .ssh then make it.
+ the "IdentityFile" for both accounts have to exist.
+  -->
+
+# Main GitHub account (default)
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+# Alternate GitHub account
+Host github.com-alt
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_alt
+  IdentitiesOnly yes
+  

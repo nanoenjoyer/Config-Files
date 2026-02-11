@@ -1,6 +1,6 @@
     #bash commands aliases
 alias os='cat /etc/os-release && uname -a'
-alias gpu='glxinfo | grep "OpenGL renderer"'
+alias gpu='glxinfo | grep -E "OpenGL vendor|OpenGL renderer"'
 alias df='df -h --exclude=squashfs'
 alias free='free -g'
 alias speed='speedtest-cli'

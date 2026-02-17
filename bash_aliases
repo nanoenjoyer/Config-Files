@@ -1,10 +1,20 @@
     #bash commands aliases
-alias os='cat /etc/os-release && uname -a'
-alias gpu='glxinfo | grep -E "OpenGL vendor|OpenGL renderer"'
+alias os='
+  echo "os: $(. /etc/os-release; echo $PRETTY_NAME)" &&
+  echo "kernel: $(uname -r)" &&
+  printf "desktop: %s\n" "$DESKTOP_SESSION" &&
+  printf "display_server: %s\n" "$XDG_SESSION_TYPE" &&
+  printf "display_manager: %s\n" "$(basename $(cat /etc/X11/default-display-manager))" &&
+  echo "cpu: $(grep -m1 "model name" /proc/cpuinfo | cut -d: -f2 | sed "s/^ //")" &&
+  echo -n "gpu: " && \
+    vendor=$(glxinfo | grep -m1 "OpenGL vendor string" | cut -d: -f2 | sed "s/^ //") && \
+    renderer=$(glxinfo | grep -m1 "OpenGL renderer string" | cut -d: -f2 | sed "s/^ //") && \
+    echo "$vendor - $renderer" &&
+  echo "ram: $(awk '\''/MemTotal/ {printf "%.1f GB", $2/1024/1024}'\'' /proc/meminfo)"
+'
 alias df='df -h --exclude=squashfs'
 alias free='free -g'
 alias speed='speedtest-cli'
-alias chess='telnet freechess.org'
 
 alias tarc='tar -cf'
 alias tarv='tar -tvf'

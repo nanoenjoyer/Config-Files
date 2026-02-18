@@ -30,7 +30,6 @@
 		"prefix": "html",
 		"body": [
 			"<!DOCTYPE html>",
-			"<html>",
 			// "\t" = 1 tab (2 space indentation), you could use spaces in there instead of "\t".
 			"<html lang='en'>",
 			"<head>",

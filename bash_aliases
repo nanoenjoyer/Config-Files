@@ -1,6 +1,17 @@
     #bash commands aliases
-alias os='cat /etc/os-release && uname -a'
-alias gpu='glxinfo | grep -E "OpenGL vendor|OpenGL renderer"'
+alias os='
+  echo "os: $(. /etc/os-release; echo $PRETTY_NAME)" &&
+  echo "kernel: $(uname -r)" &&
+  printf "desktop: %s\n" "$DESKTOP_SESSION" &&
+  printf "display_server: %s\n" "$XDG_SESSION_TYPE" &&
+  printf "display_manager: %s\n" "$(basename $(cat /etc/X11/default-display-manager))" &&
+  echo "cpu: $(grep -m1 "model name" /proc/cpuinfo | cut -d: -f2 | sed "s/^ //")" &&
+  echo -n "gpu: " && \
+    vendor=$(glxinfo | grep -m1 "OpenGL vendor string" | cut -d: -f2 | sed "s/^ //") && \
+    renderer=$(glxinfo | grep -m1 "OpenGL renderer string" | cut -d: -f2 | sed "s/^ //") && \
+    echo "$vendor - $renderer" &&
+  echo "ram: $(awk '\''/MemTotal/ {printf "%.1f GB", $2/1024/1024}'\'' /proc/meminfo)"
+'
 alias df='df -h --exclude=squashfs'
 alias free='free -g'
 alias speed='speedtest-cli'
@@ -32,11 +43,15 @@ alias up4='cd ../../../../'
 alias move_sh='./bash/move-script.sh'
 
 
-  # Programs
-alias steam='steam >/dev/null 2>&1 &'
-alias audacity='audacity >/dev/null 2>&1 &'
-alias discord='discord >/dev/null 2>&1 &'
-alias wireshark='wireshark >/dev/null 2>&1 &'
+    # Programs
+# "&" --> makes process run in the background, this allows us to use other commands in the terminal.
+# "setsid" --> makes the process still run if we terminate the terminal session.
+# "/dev/null 2>&1" --> sends stderr(standard error) and stdout(standar output) to /dev/null.
+alias steam='setsid snap run steam >/dev/null 2>&1 &'
+alias audacity='setsid audacity >/dev/null 2>&1 &'
+alias discord='setsid snap run discord >/dev/null 2>&1 &'
+alias wireshark='setsid wireshark >/dev/null 2>&1 &'
+alias insomnia='setsid insomnia >/dev/null 2>&1 &'
 # capture packets in the terminal and write to that file, max 10files each being 500MB
 # when the 10files become full it'll overwrite the first and then 2nd and so on
 # i (means interface 1 which is wifi(wlo))
@@ -82,15 +97,13 @@ alias testkey_alt='ssh -T git@github.com-alt'
 
 
     # firefox aliases
-#"&" - makes process run in the background, this allows us to use other commands in the terminal and the process will still run if we terminate the terminal session
-#"/dev/null 2>&1" - sends stderr(standard error) and stdout(standar output) to /dev/null
-alias youtube='firefox youtube.com/feed/playlists >/dev/null 2>&1 &'
-alias calc='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/basic_calculator/ >/dev/null 2>&1 &'
-alias rps='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/rps-with-bot-battles/ >/dev/null 2>&1 &'
-alias coinflip='firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/coin-flip/ >/dev/null 2>&1 &'
+alias youtube='setsid firefox youtube.com/feed/playlists >/dev/null 2>&1 &'
+alias calc='setsid firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/basic_calculator/ >/dev/null 2>&1 &'
+alias rps='setsid firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/rps-with-bot-battles/ >/dev/null 2>&1 &'
+alias coinflip='setsid firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/coin-flip/ >/dev/null 2>&1 &'
 
 
-  # My Python programs
+    # My Python programs
 # Terminal programs
 alias quiz='python3 python/basic-programs/terminal-programs/quiz_game.py'
 alias weight='python3 python/basic-programs/terminal-programs/weight_converter.py'
@@ -100,5 +113,5 @@ alias play='python3 python/basic-programs/terminal-programs/play_audio_files.py'
 alias move_py='python3 python/basic-programs/terminal-programs/move_script.py'
 alias alarm='python3 python/basic-programs/terminal-programs/alarm_clock.py'
 
-# Apps
-alias weather='python3 python/basic-programs/programs/weather-app/weather_app.py'
+# GUI programs
+alias weather='setsid python3 python/basic-programs/programs/weather-app/weather_app.py'

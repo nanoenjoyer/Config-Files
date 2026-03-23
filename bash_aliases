@@ -27,7 +27,7 @@ alias fd='fdfind'
 alias purge='sudo apt purge && sudo apt autoremove'
 alias remove='sudo apt remove'
 alias kill='pkill -f'
-alias dpkg='sudo dpkg -i'
+alias dpi='sudo dpkg -i'
 alias ls='ls -lh --color=auto'
 alias e='exit'
 alias c='clear'
@@ -52,6 +52,11 @@ alias wireshark='wireshark >/dev/null 2>&1 &'
 # when the 10files become full it'll overwrite the first and then 2nd and so on
 # i (means interface 1 which is wifi(wlo))
 alias capture='dumpcap -i 1 -w ~/Documents/sample.pcapng -b filesize:500000 -b files:10'
+
+
+    # Docker and k8s
+alias k='kubectl'
+alias d='docker'
 
 
     # git aliases

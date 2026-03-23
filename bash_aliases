@@ -49,8 +49,9 @@ alias move_sh='./bash/move-script.sh'
 alias steam='setsid snap run steam >/dev/null 2>&1 &'
 alias audacity='setsid audacity >/dev/null 2>&1 &'
 alias discord='setsid snap run discord >/dev/null 2>&1 &'
-alias wireshark='setsid wireshark >/dev/null 2>&1 &'
 alias insomnia='setsid insomnia >/dev/null 2>&1 &'
+alias rustdesk='setsid rustdesk >/dev/null 2>&1 &'
+alias wireshark='setsid wireshark >/dev/null 2>&1 &'
 # capture packets in the terminal and write to that file, max 10files each being 500MB
 # when the 10files become full it'll overwrite the first and then 2nd and so on
 # i (means interface 1 which is wifi(wlo))

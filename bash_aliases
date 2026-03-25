@@ -60,6 +60,8 @@ alias capture='dumpcap -i 1 -w ~/Documents/sample.pcapng -b filesize:500000 -b f
 
     # Docker and k8s
 alias k='kubectl'
+alias kall='kubectl get pods -A'
+
 alias d='docker'
 
 

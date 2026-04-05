@@ -92,7 +92,8 @@ alias name='git config user.name'
 # generate a new key for github acc (add space and enter account email or username in quotes)
 # example: genkey "example@gmail.com" or genkey "username"
 # if you're adding a key for alt acc, after you're asked where to save the key
-# type ~/.ssh/id_ed25519_alt
+# type /home/<username>/.ssh/id_ed25519_alt
+# or better: ssh-keygen -t ed25519 -C "<name>" -f /home/<username>/.ssh/id_ed25519_<unique_name>
 alias genkey='ssh-keygen -t ed25519 -C'
 # add key
 # for alt do the second

@@ -41,6 +41,12 @@ alias up3='cd ../../../'
 alias up4='cd ../../../../'
 alias move_sh='./bash/move-script.sh'
 
+alias t='tmux'
+alias ta='tmux attach'
+alias tl='tmux list-sessions'
+alias trw='tmux rename-window'
+alias trs='tmux rename-session'
+
 
     # Programs
 # "&" --> makes process run in the background, this allows us to use other commands in the terminal.

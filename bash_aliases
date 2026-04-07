@@ -1,3 +1,5 @@
+# remove all aliases from .bashrc
+
     #bash commands aliases
 alias os='
   echo "os: $(. /etc/os-release; echo $PRETTY_NAME)" &&
@@ -29,7 +31,8 @@ alias purge='sudo apt purge && sudo apt autoremove'
 alias remove='sudo apt remove'
 alias kill='pkill -f'
 alias dpi='sudo dpkg -i'
-alias ls='ls -lh --color=auto'
+alias l='ls -lh --color=auto'
+alias la='ls -lha --color=auto'
 alias e='exit'
 alias c='clear'
 alias s='PS1=$'

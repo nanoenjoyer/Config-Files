@@ -15,4 +15,39 @@ Host github.com-alt
   User git
   IdentityFile ~/.ssh/id_ed25519_alt
   IdentitiesOnly yes
-  
+
+
+# EC2 Ansible server 1
+Host ansible-node1
+    HostName <instance_public_IP>
+    User ubuntu
+    IdentityFile ~/.ssh/id_ed25519_ansible
+    IdentitiesOnly yes
+
+# EC2 Ansible server 2
+Host ansible-node2
+    HostName <instance_public_IP>
+    User ubuntu
+    IdentityFile ~/.ssh/id_ed25519_ansible
+    IdentitiesOnly yes
+
+# EC2 Ansible server 3
+Host ansible-node3
+    HostName <instance_public_IP>
+    User ubuntu
+    IdentityFile ~/.ssh/id_ed25519_ansible
+    IdentitiesOnly yes
+
+# EC2 Ansible server 4
+Host ansible-node4
+    HostName <instance_public_IP>
+    User ec2-user
+    IdentityFile ~/.ssh/id_ed25519_ansible
+    IdentitiesOnly yes
+
+# Local (ctrl_node)
+Host local
+    HostName localhost
+    User ibrahim
+    IdentityFile ~/.ssh/id_ed25519_ansible
+    IdentitiesOnly yes

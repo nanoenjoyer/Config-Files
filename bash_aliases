@@ -17,7 +17,7 @@ alias os='
 alias df='df -h --exclude=squashfs'
 alias free='free -g'
 alias speed='speedtest-cli'
-alias sf='screenfetch'
+alias sf='screenfetch -w 1'
 
 alias tarc='tar -cf'
 alias tarv='tar -tvf'

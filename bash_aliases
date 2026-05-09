@@ -68,11 +68,14 @@ alias wireshark='setsid wireshark >/dev/null 2>&1 &'
 alias capture='dumpcap -i 1 -w ~/Documents/sample.pcapng -b filesize:500000 -b files:10'
 
 
-    # Docker and k8s
+    # Docker, k8s, and maven
 alias k='kubectl'
 alias kall='kubectl get pods -A'
 
 alias d='docker'
+
+alias mci='mvn clean install'
+alias msr='mvn spring-boot:run'
 
 
     # git aliases

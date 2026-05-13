@@ -60,6 +60,7 @@ alias steam='setsid snap run steam >/dev/null 2>&1 &'
 alias audacity='setsid audacity >/dev/null 2>&1 &'
 alias discord='setsid snap run discord >/dev/null 2>&1 &'
 alias insomnia='setsid insomnia >/dev/null 2>&1 &'
+alias postman='setsid postman >/dev/null 2>&1 &'
 alias rustdesk='setsid rustdesk >/dev/null 2>&1 &'
 alias wireshark='setsid wireshark >/dev/null 2>&1 &'
 # capture packets in the terminal and write to that file, max 10files each being 500MB

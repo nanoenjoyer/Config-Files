@@ -77,6 +77,13 @@ alias d='docker'
 
 alias mci='mvn clean install'
 alias msr='mvn spring-boot:run'
+alias mvnt='mvn spring-boot:run \
+  -Dspring-boot.run.jvmArguments="-javaagent:/home/ibrahim/opentelemetry-javaagent.jar \
+  -Dotel.exporter.otlp.endpoint=http://localhost:4318 \
+  -Dotel.service.name=WalletApp \
+  -Dotel.metrics.exporter=none \
+  -Dotel.logs.exporter=none"
+'
 
 
     # git aliases

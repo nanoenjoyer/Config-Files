@@ -93,7 +93,7 @@ alias gd='git diff'
 alias gbn='git branch -m main'
 alias gl='git log --oneline'
 alias ga='git add'
-alias gall='git add . && gitc'
+alias gall='ga . && gc'
   #config name and mail globally
 # add space and enter email in quotes
 # example: gmail "example@gmail.com"

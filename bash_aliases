@@ -17,6 +17,7 @@ alias os='
 alias df='df -h --exclude=squashfs'
 alias free='free -g'
 alias speed='speedtest-cli'
+alias ipinfo='curl ipinfo.io'
 alias sf='screenfetch -w 1'
 
 alias tarc='tar -cf'

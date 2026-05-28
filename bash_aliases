@@ -59,6 +59,7 @@ alias trs='tmux rename-session'
 # "/dev/null 2>&1" --> sends stderr(standard error) and stdout(standar output) to /dev/null.
 alias steam='setsid steam >/dev/null 2>&1 &'
 alias audacity='setsid audacity >/dev/null 2>&1 &'
+alias kdenlive='setsid kdenlive >/dev/null 2>&1 &'
 alias discord='setsid snap run discord >/dev/null 2>&1 &'
 alias insomnia='setsid insomnia >/dev/null 2>&1 &'
 alias postman='setsid postman >/dev/null 2>&1 &'

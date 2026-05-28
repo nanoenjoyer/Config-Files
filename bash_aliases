@@ -57,7 +57,7 @@ alias trs='tmux rename-session'
 # "&" --> makes process run in the background, this allows us to use other commands in the terminal.
 # "setsid" --> makes the process still run if we terminate the terminal session.
 # "/dev/null 2>&1" --> sends stderr(standard error) and stdout(standar output) to /dev/null.
-alias steam='setsid snap run steam >/dev/null 2>&1 &'
+alias steam='setsid steam >/dev/null 2>&1 &'
 alias audacity='setsid audacity >/dev/null 2>&1 &'
 alias discord='setsid snap run discord >/dev/null 2>&1 &'
 alias insomnia='setsid insomnia >/dev/null 2>&1 &'

@@ -73,7 +73,7 @@ alias wireshark='setsid wireshark >/dev/null 2>&1 &'
 alias capture='dumpcap -i 1 -w ~/Documents/sample.pcapng -b filesize:500000 -b files:10'
 
 
-    # Docker | k8s | maven | k6
+    # Docker | k8s | maven | k6 | playwright
 alias k='kubectl'
 alias kall='kubectl get pods -A'
 
@@ -81,6 +81,7 @@ alias d='docker'
 
 alias mci='mvn clean install'
 alias msr='mvn spring-boot:run'
+# run spring-boot with trace
 alias mvnt='mvn spring-boot:run \
   -Dspring-boot.run.jvmArguments="-javaagent:/home/ibrahim/opentelemetry-javaagent.jar \
   -Dotel.exporter.otlp.endpoint=http://localhost:4318 \
@@ -93,6 +94,7 @@ alias mvnt='mvn spring-boot:run \
 alias k6run='K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true k6 run --out experimental-prometheus-rw=http://localhost:9090/api/v1/write'
 alias k6login='k6 run --out experimental-prometheus-rw=http://localhost:9090/api/v1/write sonarqube_login.js'
 
+alias npt='npx playwright test'
 
     # git aliases
 alias gc='git commit -m'

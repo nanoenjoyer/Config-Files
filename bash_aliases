@@ -138,13 +138,6 @@ alias testkey='ssh -T git@github.com'
 alias testkey_alt='ssh -T git@github.com-alt'
 
 
-    # firefox aliases
-alias youtube='setsid firefox youtube.com/feed/playlists >/dev/null 2>&1 &'
-alias calc='setsid firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/basic_calculator/ >/dev/null 2>&1 &'
-alias rps='setsid firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/rps-with-bot-battles/ >/dev/null 2>&1 &'
-alias coinflip='setsid firefox https://ibrahimmoalim.github.io/JavaScript/basic-projects/coin-flip/ >/dev/null 2>&1 &'
-
-
     # My Python programs
 # Terminal programs
 alias quiz='python3 python/basic-programs/terminal-programs/quiz_game.py'

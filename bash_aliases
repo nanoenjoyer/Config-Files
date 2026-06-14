@@ -116,6 +116,16 @@ alias gname='git config --global user.name'
 alias mail='git config user.email'
 alias name='git config user.name'
 
+# sync main and dev(or any other branch) after a PR on remote
+gsyncdev() {
+  git switch main
+  git pull origin main
+  git switch dev
+  git merge main
+  git push origin dev
+}
+
+
 
     # GitHub key-gen aliases
 # generate a new key for github acc (add space and enter account email or username in quotes)

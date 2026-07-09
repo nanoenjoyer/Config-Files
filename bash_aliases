@@ -81,19 +81,19 @@ alias kall='kubectl get pods -A'
 alias d='docker'
 
 alias mci='mvn clean install'
-alias msr='mvn spring-boot:run'
+alias msr='mvn spring-boot:run >> logs/wallet-app.log 2>&1'
 # run spring-boot with trace
 alias mvnt='mvn spring-boot:run \
   -Dspring-boot.run.jvmArguments="-javaagent:/home/ibrahim/opentelemetry-javaagent.jar \
   -Dotel.exporter.otlp.endpoint=http://localhost:4318 \
   -Dotel.service.name=WalletApp \
   -Dotel.metrics.exporter=none \
-  -Dotel.logs.exporter=none"
+  -Dotel.logs.exporter=none" >> logs/wallet-app.log 2>&1
 '
 
 # follow with --vus, --duration and file-path
-alias k6run='K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true k6 run --out experimental-prometheus-rw=http://localhost:9090/api/v1/write'
-alias k6login='k6 run --out experimental-prometheus-rw=http://localhost:9090/api/v1/write sonarqube_login.js'
+alias k6run='K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true K6_PROMETHEUS_RW_SERVER_URL=http://localhost:9091/api/v1/write k6 run --out experimental-prometheus-rw'
+alias k6login='K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true K6_PROMETHEUS_RW_SERVER_URL=http://localhost:9091/api/v1/write k6 run --out experimental-prometheus-rw sonarqube_login.js'
 
 alias npt='npx playwright test'
 
